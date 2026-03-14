@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
-import VideoCard from "../components/VideoCard";
+import VideoCard from "../components/VideoCard.jsx";
 import Loader from "../components/Loader";
 
 function Feed() {
