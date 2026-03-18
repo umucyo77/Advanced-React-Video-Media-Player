@@ -1,3 +1,4 @@
+import React from "react";
 import axios from "axios";
 
 const BASE_URL = "https://youtube-v31.p.rapidapi.com";
@@ -11,6 +12,11 @@ const api = axios.create({
 });
 
 export const fetchFromAPI = async (url) => {
-  const { data } = await api.get(url);
-  return data;
+  try {
+    const { data } = await api.get(url);
+    return data;
+  } catch (error) {
+    console.error("API ERROR:", error.response?.data || error.message);
+    throw error;
+  }
 };
