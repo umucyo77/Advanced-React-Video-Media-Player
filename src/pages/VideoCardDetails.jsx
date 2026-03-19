@@ -8,7 +8,7 @@ import { fetchFromAPI } from "../utils/fetchFromAPI";
 
 function VideoCardDetails() {
   const { id } = useParams();
-
+  
   // Fetch video details
   const { data: videoData, isLoading: videoLoading, isError: videoError } = useQuery({
     queryKey: ["video", id],
